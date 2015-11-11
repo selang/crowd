@@ -22,7 +22,7 @@ RUN             mkdir -p ${CROWD_INSTALL_DIR} && \
 
 # integrate mysql connector j library
 RUN             curl -L --silent http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${MYSQL_CONNECTOR_J_VERSION}.tar.gz | tar -xz --strip=1 -C /tmp && \
-                cp /tmp/mysql-connector-java-${MYSQL_CONNECTOR_J_VERSION}-bin.jar ${CROWD_INSTALL_DIR}/lib && \
+                cp /tmp/mysql-connector-java-${MYSQL_CONNECTOR_J_VERSION}-bin.jar ${CROWD_INSTALL_DIR}/apache-tomcat/lib && \
                 rm -rf /tmp/*
 
 # add docker-entrypoint.sh script
