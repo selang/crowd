@@ -18,7 +18,8 @@ RUN             apt-get update && \
 
 # download and extract crowd 
 RUN             mkdir -p ${CROWD_INSTALL_DIR} && \
-                curl -L --silent https://www.atlassian.com/software/crowd/downloads/binary/atlassian-crowd-${CROWD_VERSION}.tar.gz | tar -xz --strip=1 -C ${CROWD_INSTALL_DIR}
+                curl -L --silent https://www.atlassian.com/software/crowd/downloads/binary/atlassian-crowd-${CROWD_VERSION}.tar.gz | tar -xz --strip=1 -C ${CROWD_INSTALL_DIR} && \
+		echo -e "\ncrowd.home=$CROWD_HOME" >> "${CROWD_INSTALL_DIR}/crowd-webapp/WEB-INF/classes/crowd-init.properties"
 
 # integrate mysql connector j library
 RUN             curl -L --silent http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${MYSQL_CONNECTOR_J_VERSION}.tar.gz | tar -xz --strip=1 -C /tmp && \
