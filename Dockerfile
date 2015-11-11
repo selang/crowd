@@ -26,7 +26,7 @@ RUN             curl -L --silent http://dev.mysql.com/get/Downloads/Connector-J/
                 rm -rf /tmp/*
 
 # add docker-entrypoint.sh script
-#COPY            docker-entrypoint.sh ${STASH_INSTALL_DIR}/bin/
+COPY            docker-entrypoint.sh ${CROWD_INSTALL_DIR}/bin/
 
 # HTTP Port
 EXPOSE		8095	
@@ -35,5 +35,5 @@ VOLUME		["${CROWD_INSTALL_DIR}"]
 
 WORKDIR		${CROWD_INSTALL_DIR}
 
-#ENTRYPOINT	["bin/docker-entrypoint.sh"]
-#CMD		["bin/start-bitbucket.sh", "-fg"]
+ENTRYPOINT	["bin/docker-entrypoint.sh"]
+CMD		["apache-tomcat/bin/catalina.sh", "run"]
