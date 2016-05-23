@@ -32,8 +32,6 @@ COPY            docker-entrypoint.sh ${CROWD_INSTALL_DIR}/bin/
 # HTTP Port
 EXPOSE		8095	
 
-VOLUME		["${CROWD_INSTALL_DIR}"]
-
 WORKDIR		${CROWD_INSTALL_DIR}
 
 ENTRYPOINT	["bin/docker-entrypoint.sh"]
