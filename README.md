@@ -1,4 +1,4 @@
-# docker-atlassian-crowd
+# crowd
 
 A docker image for Crowd.
 

@@ -1,8 +1,8 @@
 FROM		hauptmedia/java:oracle-java8
-MAINTAINER	Julian Haupt <julian.haupt@hauptmedia.de>
+MAINTAINER	selang
 
-ENV		CROWD_VERSION 2.9.1
-ENV		MYSQL_CONNECTOR_J_VERSION 5.1.34
+ENV		CROWD_VERSION 3.1.2
+ENV		MYSQL_CONNECTOR_J_VERSION 5.1.46
 
 ENV		CROWD_HOME     		/var/atlassian/application-data/crowd
 ENV		CROWD_INSTALL_DIR	/opt/atlassian/crowd
