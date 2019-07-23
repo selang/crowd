@@ -1,7 +1,7 @@
 FROM		hauptmedia/java:oracle-java8
 MAINTAINER	selang
 
-ENV		CROWD_VERSION 3.1.2
+ENV		CROWD_VERSION 3.1.6
 ENV		MYSQL_CONNECTOR_J_VERSION 5.1.46
 
 ENV		CROWD_HOME     		/var/atlassian/application-data/crowd
